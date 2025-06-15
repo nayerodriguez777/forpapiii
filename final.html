@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para terminar... </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container final">
+    <div class="carta-final">
+      <h2>Mi amor,</h2>
+      <p>
+        Gracias por seguir siendo parte de mi vida y por permitirme seguir siendo parte de la tuya, no existen palabras que puedan explicar lo afortunada y dichosa que me siento de ser tu bebé y poder ofrecerte todo de mí, que me cuides y des todo por mí. Todo eso te ha convertido en lo que eres ahora, un papá honorable y el mayor héroe para esta chiquita!
+        Hice esta página con todo mi cariño, como un abrazo digital ahora que estamos lejos, espero que llegue a ti con mucho amor, papi.
+      </p>
+      <p>
+        Siempre tuya, <br/>
+        <strong>Tu niña.</strong>
+      </p>
+    </div>
+    <button onclick="volver()">Volver al inicio 🏡</button>
+  </div>
+
+  <script>
+    function volver() {
+      window.location.href = "index.html";
+    }
+
+    // Animación de corazones
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }, 300);
+  </script>
+</body>
+</html>

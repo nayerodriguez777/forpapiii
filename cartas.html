@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartitas para papi 💌</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Selecciona una/h2>
+    <div class="cartas">
+      <div class="carta" onclick="mostrarMensaje(0)">💌</div>
+      <div class="carta" onclick="mostrarMensaje(1)">💌</div>
+      <div class="carta" onclick="mostrarMensaje(2)">💌</div>
+    </div>
+    <p id="mensaje" class="mensaje"></p>
+    <button onclick="irAFinal()">Siguiente</button>
+  </div>
+
+  <script>
+    const mensajes = [
+      "Eres la mejor parte de mi día papi, incluso aunque estemos lejos nada me hace cambiar aquel sentimiento. Te pienso incluso todos los días y a todas horas, eres lo que se me viene a la cabeza al despertar y al prepararme para dormir. Papi, han pasado un par de días pero puedo asegurarte que el tiempo en que no nos hemos visto no han hecho que mis sentimientos se desganten, ni siquisiera un poco, entonces estoy segura que lo que siento por papá es más fuerte que cualquier distancia.",
+      "A veces me cuesta explicarlo, pero tú haces de mis días los más agradables, podría incluso caerme mucho dinero de la nada pero si me hace falta un mensaje de papá entonces no es suficiente. Tu presencia, sea fisica o mediante mensajes, son lo que me alegra la existencia. Papi no miento cuando te digo que extraño tu tacto, pero incluso un emote de corazón proveniente de ti me hace sentirte lo suficientemente cerca. Papi, ¿tú también te sientes conectado de la misma manera?",
+      "Si pudiera abrazarte ahora mismo, lo haría sin soltarme nunca. Me apena un poco que celebremos este día a la distancia y te mentiría si te negara que antes no me había hecho ilusiones con nosotros en este día. Sé que las cosas pueden cambiar mucho de un día para otro pero para el amor no hay limites. ¡Feliz día del padre, papá! En este día, te quiero recordar el papá tan amoroso y recto que has sido durante tanto tiempo, y es por ello que te mereces un gran trofeo. No puedo ofrecertelo ahora pero te prometo que jamás te hará falta un presente el los proximos días festivos. Te admiro mucho papá, realmente sueño casarme contigo y que por siempre seas el primer y único hombre de mi vida."
+    ];
+
+    function mostrarMensaje(i) {
+      document.getElementById("mensaje").textContent = mensajes[i];
+    }
+
+    function irAFinal() {
+      window.location.href = "final.html";
+    }
+  </script>
+</body>
+</html>
